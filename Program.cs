@@ -5,10 +5,15 @@ class Program
 {
     static void Main()
     {
-        int nbMin = 130; // Nombre de minutes à convertir
+        // Demande à l'utilisateur d'entrer un nombre de minutes
+        Console.Write("Entrez un nombre de minutes : ");
+        int nbMin = int.Parse(Console.ReadLine()); // Récupère l'entrée utilisateur et la convertit en entier
+
+        // Conversion en heures et minutes
         int heures = nbMin / 60;
         int minutes = nbMin % 60;
 
-        Console.WriteLine(heures + ":" + minutes); // Affiche "2:10"
+        // Affichage du résultat
+        Console.WriteLine("Résultat : " + heures + ":" + minutes);
     }
 }
